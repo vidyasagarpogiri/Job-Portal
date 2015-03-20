@@ -1,0 +1,15 @@
+<div class="transitions-enabled" id="listing">
+  <% @listing.each do |listing| %>
+    <div class="box panel panel-default">
+      <%= link_to (image_tag listing.image.url), listing %>
+      <h2>
+        <%= link_to listing.title, listing %>
+      </h2>
+      <p class="user">
+        Submitted by
+        <%= listing.user.name %><br>
+        <%= listing.updated_at.strftime("%d %b, %Y %I:%M %p") %>
+      </p>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,54 @@
+<div class="row" id="listing_show">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <br><div class="listing_image col-md-6">
+        <%= image_tag @listing.image.url, size: "350x350" %>
+      </div>
+      <div class="listing_image col-md-6">
+        <% if @listing.image1.present? && @listing.image1.url.present? %>
+        <%= image_tag @listing.image1.url, size: "350x350"%>
+        <%else%>
+        <%= image_tag "vlx.jpg", size: "350x350" %> 
+        <% end %>
+      </div>
+      <div></div><hr>
+      <div class="panel-body">
+        <h1>
+          <%= @listing.title %><hr>
+        </h1>
+        <p class="description">
+          <b>Description :</b><%= @listing.description %><br><hr>
+          <b>Posted by :</b><%= @listing.user.name %> <br><hr>
+          <b>Mobile Number :</b><%= @listing.mobile_number %><br><hr>
+          <b>Price :</b><%= @listing.price %><br><hr>
+          <b>Location :</b><%= @listing.address %><br><hr>
+          <b>Created On/Updated On :</b> <%= @listing.updated_at.strftime("%d %b, %Y %I:%M %p") %> 
+        </p>
+      </div>
+      
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="user">
+              
+            </p>
+            <br>
+          </div>
+          <div class="col-md-6">
+            <div class="btn-group pull-right">
+            <%# raise @listing.inspect %>
+            <%= link_to "Back", listings_path, class: "btn btn-info" %>
+            <%if current_user.present? %>
+            <% if current_user.id == @listing.user_id %> 
+              <%# if @listing.user_signed_in? %>
+                <%= link_to "Edit", edit_listing_path, class: "btn btn-success" %>
+                <%= link_to "Delete", listing_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+              <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
