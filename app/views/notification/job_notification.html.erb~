@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<%= @listing.user.email %> has posted new job.
+<hr>
+
+<ul>
+ <li>Job Title: <%= @listing.title %></li> 
+ <li>Job Description: <%= @listing.description %></li> 
+ <li>Experience Required: <%= @listing.experience %> 
+ <li>Company Website: <%= @listing.website%>
+</ul> 
+
+           
+  </table>
+</body>
+</html>
+
+

@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 20150319114954) do
     t.integer  "image1_file_size"
     t.datetime "image1_updated_at"
     t.string   "mobile_number"
-    t.float    "price"
+    t.float    "experience"
     t.text     "address"
+    t.string   "website"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
