@@ -19,7 +19,7 @@
         <p class="description">
           <b>Job Description :</b><%= @listing.description %><br><hr>
           <b>Posted by :</b><%= @listing.user.name %> <br><hr>
-          <b>Mobile Number :</b><%= @listing.mobile_number %><br><hr>
+          <b>Website :</b><%= @listing.website %><br><hr>          
           <b>Experience Required :</b><%= @listing.experience %><br><hr>
           <b>Location :</b><%= @listing.address %><br><hr>
           <b>Created On/Updated On :</b> <%= @listing.updated_at.strftime("%d %b, %Y %I:%M %p") %> 

@@ -20,9 +20,6 @@
   <div class="form-group">
     <%= f.input :description, input_html: { class: 'form-control' } %>
   </div>
-  <div class="form-group">
-    <%= f.input :mobile_number, input_html: { class: 'form-control' } %>
-  </div>
     <div class="form-group">
     <%= f.input :website, input_html: { class: 'form-control' } %>
   </div>
@@ -30,7 +27,7 @@
     <%= f.input :address, input_html: { class: 'form-control' } %>
   </div>
   <div class="form-group">
-    Experience:<%= f.input :price, input_html: { class: 'form-control' } %>
+    <%= f.input :experience, input_html: { class: 'form-control' } %>
   </div>
 
   <%= f.submit 'Post', class: "btn btn-primary" %>

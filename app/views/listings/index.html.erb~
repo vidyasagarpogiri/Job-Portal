@@ -1,4 +1,5 @@
 <div class="transitions-enabled" id="listing">
+<% if @listing.present? %>
   <% @listing.each do |listing| %>
     <div class="box panel panel-default">
       <%# link_to (image_tag listing.image.url), listing %>
@@ -12,4 +13,7 @@
       </p>
     </div>
   <% end %>
+  <%else%>
+  No Jobs to display
+  <%end%>
 </div>
